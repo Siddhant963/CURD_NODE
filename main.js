@@ -34,30 +34,30 @@ jwt.verify( req.cookies.token , 'secret' , (err, decoded)=>{
 
 
 
-// app.get('/', (req, res) => {
-//      res.cookie("name" , "siddhant");
-//     res.send('Hello World!');
-// });
+app.get('/', (req, res) => {
+     res.cookie("name" , "siddhant");
+    res.send('Hello World!');
+});
 
-// app.get('/read', (req, res) => {
-//     console.log(req.cookies);
-//     res.send('Cookie value: '+ req.cookies.name);
-// });
+app.get('/read', (req, res) => {
+    console.log(req.cookies);
+    res.send('Cookie value: '+ req.cookies.name);
+});
 
 
-// app.get('/read', (req, res) => {
-//      bcrypt.compare('annu', '$2b$10$g13xJcb0MJZAD5IdhsUJAus94S99OK/5o7x.EV3ChOUcMAK9zCUWm', function(err, result) {
-//          console.log(result);
+app.get('/read', (req, res) => {
+     bcrypt.compare('annu', '$2b$10$g13xJcb0MJZAD5IdhsUJAus94S99OK/5o7x.EV3ChOUcMAK9zCUWm', function(err, result) {
+         console.log(result);
          
-//       });
-// });
-// app.get('/', (req, res) => {
-//      bcrypt.genSalt(10, function(err, salt) {
-//           bcrypt.hash("annu", salt, function(err, hash) {
-//            console.log(hash);
+      });
+});
+app.get('/', (req, res) => {
+     bcrypt.genSalt(10, function(err, salt) {
+          bcrypt.hash("annu", salt, function(err, hash) {
+           console.log(hash);
            
                
-//           });
-//       });
-//      });
+          });
+      });
+     });
 app.listen(3300);
